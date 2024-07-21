@@ -1,0 +1,70 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const BlueberryCakeProduct = ({ id, imageUrl, name, price, discount, addToCart }) => {
+    return (
+        <div className="col-lg-3 col-md-4 col-sm-6 col-12 p-2">
+            <div className="card card-border-radius" data-aos="fade-right">
+                <div className="img-container p-3 border-radius">
+                    <img src={imageUrl} className="card-img" alt="..." />
+                </div>
+                <div className="card-body pt-1 text-left">
+                    <h5 className="card-title"><b>{name}</b></h5>
+                    <p className="card-text text-left">Rs. {price} {discount && <span className="text-green pl-2">({discount}% off)</span>}</p>
+                    <button onClick={() => addToCart({ id, name, price })} className="btn btn-warning btn-block mb-2">Add To Cart</button>
+                    <Link to={`/payment/${id}`} className="payment-href"><button type="button" className="btn btn-success btn-block">Order Now</button></Link>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+const BlueberryCakeSection = ({ addToCart }) => {
+    return (
+        <div className="container-fluid mt-5 mb-5" id="blueberry">
+            <div className="heading-line text-center mb-5" data-aos="zoom-in">
+                <span className="heading-up text-center text-blue font-weight p-1">Coffee, Walnut & Blueberry Cake</span>
+            </div>
+            <div className="container">
+                <div className="row no-gutters pt-2">
+                    <BlueberryCakeProduct
+                        id={1}
+                        imageUrl="Images/viscous-blueberry-cheesecake-cake2859blue-A.jpg"
+                        name="Blueberry Cake"
+                        price={949}
+                        discount={20}
+                        addToCart={addToCart}
+                    />
+                    <BlueberryCakeProduct
+                        id={2}
+                        imageUrl="Images/sq-coffee-mocha-cake0011coff-AA.jpg"
+                        name="Sq Coffee Cake"
+                        price={749}
+                        discount={15}
+                        addToCart={addToCart}
+                    />
+                    <BlueberryCakeProduct
+                        id={3}
+                        imageUrl="Images/sq-blueberry-cake-1-cake889blue-AA.jpg"
+                        name="Cheese Cake"
+                        price={649}
+                        discount={10}
+                        addToCart={addToCart}
+                    />
+                    <BlueberryCakeProduct
+                        id={4}
+                        imageUrl="Images/sq-coffee-walnut-cake0012exco-AA.jpg"
+                        name="Walnut Cake"
+                        price={549}
+                        discount={18}
+                        addToCart={addToCart}
+                    />
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default BlueberryCakeSection;

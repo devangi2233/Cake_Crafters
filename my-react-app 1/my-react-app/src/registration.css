@@ -1,0 +1,50 @@
+.container label {
+  color: #0e172f;
+  font-size: 22px;
+  font-family: 'comic sans ms';
+  display: inline-block;
+  width: 200px; 
+  margin-bottom: 0px;
+}
+
+.container input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 300px; 
+  height: 30px;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0px;
+}
+
+.container input[type="radio"],
+input[type="checkbox"]{
+  font-size: 80px;
+}
+
+.container h2 {
+  color: #0e172f;
+  font-size: 30px;
+  font-family: 'comic sans ms';
+}
+
+.btn1 {
+  width: 130px;
+  height: 40px;
+  background-color: #243665;
+  color: #dbed36;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+}
+
+.container {
+  width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin: 100px auto;
+  padding: 15px;
+}

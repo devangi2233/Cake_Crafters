@@ -1,0 +1,16 @@
+
+
+footer {
+    width: 100%;
+    background-color: #dbed36;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0; /* Ensures footer sticks to the bottom */
+    left: 0;
+    z-index: 100; /* Ensures footer is above other content */
+    font-size: 23px;
+    font-family: 'comic sans ms';
+  }
+  
